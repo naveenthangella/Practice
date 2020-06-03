@@ -6,6 +6,7 @@ resource "aws_instance" "practice" {
   ami = data.aws_ami.ami.image_id
   instance_type = "t2.micro"
   key_name = "practice"
+  security_groups = [data.aws_security_group.sg.id]
   tags = {
     Name  = "practice"
   }
@@ -21,6 +22,9 @@ resource "aws_instance" "practice" {
       "yum install ansible -y"
     ]
   }
+}
+data "aws_security_group" "sg" {
+  name = "CentOS 7 -x86_64- - with Updates HVM-2002_01-AutogenByAWSMP-"
 }
 
 data "aws_ami" "ami" {
