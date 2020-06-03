@@ -12,7 +12,7 @@ resource "aws_instance" "practice" {
 
   provisioner "remote-exec" {
     connection {
-      type = ssh
+      type = "ssh"
       host = self.private_ip
       user = "centos"
       private_key = file("/home/centos/.ssh/id_rsa")
