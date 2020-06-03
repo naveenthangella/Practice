@@ -6,7 +6,7 @@ resource "aws_instance" "practice" {
   ami = data.aws_ami.ami.image_id
   instance_type = "t2.micro"
   key_name = "practice"
-  security_groups = [data.aws_security_group.sg.id]
+  security_groups = [data.aws_security_group.sg.name]
   tags = {
     Name  = "practice"
   }
