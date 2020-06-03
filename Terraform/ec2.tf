@@ -19,7 +19,7 @@ resource "aws_instance" "practice" {
       private_key = file("/home/centos/.ssh/id_rsa")
     }
     inline = [
-      "yum install ansible -y"
+      "sudo yum install ansible -y"
     ]
   }
 }
