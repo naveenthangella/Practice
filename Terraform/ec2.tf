@@ -25,7 +25,7 @@ resource "aws_instance" "practice" {
 }
 data "aws_security_group" "sg" {
   filter {
-    name = "ssh"
+    name = "Security group name"
     values = ["CentOS 7 -x86_64- - with Updates HVM-2002_01-AutogenByAWSMP-"]
   }
 }
