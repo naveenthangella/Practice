@@ -30,9 +30,6 @@ data "aws_security_group" "sg" {
   }
 }
 
-resource "aws_security_group" "ssh" {
-
-}
 
 data "aws_ami" "ami" {
   owners = ["679593333241"]
