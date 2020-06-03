@@ -24,7 +24,10 @@ resource "aws_instance" "practice" {
   }
 }
 data "aws_security_group" "sg" {
-  name = "CentOS 7 -x86_64- - with Updates HVM-2002_01-AutogenByAWSMP-"
+  filter {
+    name = "ssh"
+    values = ["CentOS 7 -x86_64- - with Updates HVM-2002_01-AutogenByAWSMP-"]
+  }
 }
 
 data "aws_ami" "ami" {
