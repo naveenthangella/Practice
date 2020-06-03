@@ -19,6 +19,7 @@ resource "aws_instance" "practice" {
       private_key = file("/home/centos/.ssh/id_rsa")
     }
     inline = [
+      "sudo yum install epel-release -y"
       "sudo yum install ansible -y"
     ]
   }
