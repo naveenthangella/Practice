@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 resource "aws_instance" "practice" {
-  count = "2"
   ami = data.aws_ami.ami.image_id
   instance_type = "t2.micro"
   key_name = "practice"
