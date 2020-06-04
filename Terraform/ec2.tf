@@ -34,11 +34,11 @@ resource "aws_s3_bucket" "html" {
     Name = "my bucket"
   }
 }
-resource "aws_s3_bucket_object" "Object" {
-  bucket = "sample-html-naveen"
-  key = "sample-html"
-  source = ""
-}
+//resource "aws_s3_bucket_object" "Object" {
+//  bucket = "sample-html-naveen"
+//  key = "sample-html"
+//  source = ""
+//}
 
 data "aws_security_group" "sg" {
   filter {
