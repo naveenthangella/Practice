@@ -28,12 +28,12 @@ resource "aws_instance" "practice" {
 }
 
 resource "aws_s3_bucket" "HTML" {
-  bucket = "sample_html_naveen"
+  bucket = "sample-html-naveen"
   acl = "public"
 }
 resource "aws_s3_bucket_object" "Object" {
-  bucket = "sample_html_naveen"
-  key = "sample_html"
+  bucket = "sample-html-naveen"
+  key = "sample-html"
   source = ""
 }
 
