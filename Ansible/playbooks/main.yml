@@ -1,6 +1,7 @@
-- name: install nginx
+- name: install and configure nginx
   hosts: localhost
   tasks:
-    package:
-      name: nginx
-      state: latest
+    - name: install nginx
+      package:
+        name: nginx
+        state: latest
