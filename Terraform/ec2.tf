@@ -27,7 +27,13 @@ resource "aws_instance" "practice" {
   }
 }
 
-
+resource "aws_s3_bucket" "html" {
+  bucket = "sample-html-naveen"
+  acl = "private"
+  tags = {
+    Name = "my bucket"
+  }
+}
 //resource "aws_s3_bucket_object" "Object" {
 //  bucket = "sample-html-naveen"
 //  key = "sample-html"
