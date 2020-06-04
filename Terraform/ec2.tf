@@ -21,7 +21,7 @@ resource "aws_instance" "practice" {
     inline = [
       "sudo yum install epel-release -y",
       "sudo yum install ansible -y",
-      "echo localhost >/tmp/hosts"
+      "echo localhost > /tmp/hosts"
     ]
   }
 }
