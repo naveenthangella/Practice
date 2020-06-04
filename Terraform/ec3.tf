@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-west-2"
-}
 
 resource "aws_instance" "practice" {
   ami = data.aws_ami.ami.image_id
@@ -8,7 +5,7 @@ resource "aws_instance" "practice" {
   key_name = "practice"
   security_groups = [data.aws_security_group.sg.name]
   tags = {
-    Name  = "practice"
+    Name  = "practice1"
   }
 
   provisioner "remote-exec" {
