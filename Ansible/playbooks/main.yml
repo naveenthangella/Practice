@@ -22,4 +22,4 @@
     - name: display all files
       debug:
         msg: "{{ item }}"
-      loop: "{{ FILES }}"
+      loop: "{{ FILES.files }}"
