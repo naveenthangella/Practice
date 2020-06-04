@@ -21,5 +21,5 @@
 
     - name: display all files
       debug:
-        msg: "{{ item }}"
+        msg: "{{ item.path }}"
       loop: "{{ FILES.files }}"
