@@ -1,5 +1,5 @@
 - name: install nginx
   hosts: all
-  package:
+  packages:
     name: nginx
     state: latest
