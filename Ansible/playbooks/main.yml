@@ -1,5 +1,5 @@
 - name: install nginx
   hosts: localhost
-  package:
+  yum:
     name: nginx
     state: latest
