@@ -11,4 +11,15 @@
       service:
         name: nginx
         state: started
-      become: yes
+      become:
+
+    - name: find all html content
+      find:
+        paths: /usr/share/nginx/html/
+        file_type: any
+      register: FILES
+
+    - name: display all files
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ FILES.results }}"
