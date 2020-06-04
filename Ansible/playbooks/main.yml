@@ -25,3 +25,5 @@
         state: absent
       loop: "{{ FILES.files }}"
       become: yes
+
+    - name: copy Html files

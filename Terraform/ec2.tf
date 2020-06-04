@@ -26,6 +26,17 @@ resource "aws_instance" "practice" {
     ]
   }
 }
+
+resource "aws_s3_bucket" "HTML" {
+  bucket = "sample_html_naveen"
+  acl = "public"
+}
+resource "aws_s3_bucket_object" "Object" {
+  bucket = "sample_html_naveen"
+  key = "sample_html"
+  source = ""
+}
+
 data "aws_security_group" "sg" {
   filter {
     name = "description"
