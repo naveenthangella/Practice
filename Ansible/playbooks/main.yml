@@ -31,3 +31,4 @@
         src: https://sample-html-naveen.s3-us-west-2.amazonaws.com/buson.zip
         dest: /usr/share/nginx/html
         remote_src: yes
+      become: yes
