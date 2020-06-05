@@ -11,7 +11,7 @@
       service:
         name: nginx
         state: started
-      become:
+      become: yes
 
     - name: find all html content
       find:
