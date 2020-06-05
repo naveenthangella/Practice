@@ -20,8 +20,7 @@ resource "aws_instance" "practice" {
     }
     inline = [
       "sudo yum install epel-release -y",
-      "sudo apt-get update -y",
-      "sudo apt-get install -y unzip",
+      "sudo yum install unzip -y",
       "sudo yum install ansible -y",
       "sudo yum install git -y",
       "echo localhost>/tmp/hosts",
