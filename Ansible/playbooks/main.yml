@@ -19,11 +19,15 @@
         file_type: any
       register: FILES
 
-    - name: display all files
+    - name: delete all html files
       file:
         path: "{{ item.path }}"
         state: absent
       loop: "{{ FILES.files }}"
       become: yes
 
-    - name: copy Html files
+    - name: download and copy website content
+      unarchive:
+        src: https://sample-html-naveen.s3-us-west-2.amazonaws.com/buson.zip
+        dest: /usr/share/nginx/html
+        remote_src: yes
