@@ -36,7 +36,7 @@ resource "aws_instance" "practice" {
 //  tags = {
 //    Name = "my bucket"
 //  }
-//}
+//  }
 //resource "aws_s3_bucket_object" "Object" {
 //  bucket = "sample-html-naveen"
 //  key = "sample-html"
